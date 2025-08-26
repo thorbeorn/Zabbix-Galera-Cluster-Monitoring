@@ -15,13 +15,18 @@ Il s'appuie sur des **UserParameters** pour interroger les variables `wsrep`.
 ---
 
 ## ✅ **Installation**
-1. **Copiez les UserParameters** dans le fichier `zabbix_agentd.conf.d/galera.conf` :
+1a. **Telecharger le fichier galera.conf** dans le dossier `zabbix_agent2.d/plugins.d` :
    ```bash
-   /etc/zabbix/zabbix_agentd.conf.d/galera.conf
+apt update -y && apt install -y wget
+wget https://raw.githubusercontent.com/thorbeorn/Zabbix-Galera-Cluster-Monitoring/refs/heads/main/galera.conf -O /etc/zabbix/zabbix_agent2.d/plugins.d/galera.conf
+   ```
+1b. **Copiez galera.conf** dans le fichier `zabbix_agent2.d/plugins.d/galera.conf` :
+   ```bash
+   nano /etc/zabbix/zabbix_agent2.d/plugins.d/galera.conf
    ```
 2. **Testez une clé** pour vérifier :
    ```bash
-   zabbix_agentd -t galera.cluster.size
+   zabbix_agent2 -t "galera.node.connected"
    ```
 3. **Assurez-vous que l'utilisateur Zabbix a accès à MySQL** :
    ```bash
