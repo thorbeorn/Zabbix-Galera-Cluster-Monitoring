@@ -18,7 +18,7 @@ Il s'appuie sur des **UserParameters** pour interroger les variables `wsrep`.
    1a. **Telecharger le fichier galera.conf** dans le dossier `zabbix_agent2.d/plugins.d` :
    ```bash
    apt update -y && apt install -y wget
-   wget https://raw.githubusercontent.com/thorbeorn/Zabbix-Galera-Cluster-      Monitoring/refs/heads/main/galera.conf -O /etc/zabbix/zabbix_agent2.d/plugins.d/galera.conf
+   wget https://raw.githubusercontent.com/thorbeorn/Zabbix-Galera-Cluster-Monitoring/refs/heads/main/galera.conf -O /etc/zabbix/zabbix_agent2.d/plugins.d/galera.conf
    ```
    1b. **Copiez galera.conf** dans le fichier `zabbix_agent2.d/plugins.d/galera.conf` :
    ```bash
