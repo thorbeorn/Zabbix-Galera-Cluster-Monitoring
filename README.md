@@ -24,15 +24,21 @@ Il s'appuie sur des **UserParameters** pour interroger les variables `wsrep`.
    ```bash
    nano /etc/zabbix/zabbix_agent2.d/plugins.d/galera.conf
    ```
-2. Redémarrez l'agent Zabbix :
+2. Modifier le user et le pass pour se connecter a la bdd
+**Verifier que la base tourne et cree un user qui a accer a wsrep_%**
+```bash
+sed -i "s/db_user/{inscrire votre user}/g" /etc/zabbix/zabbix_agent2.d/plugins.d/galera.conf
+sed -i "s/db_pass/{inscrire votre pass}/g" /etc/zabbix/zabbix_agent2.d/plugins.d/galera.conf
+```
+4. Redémarrez l'agent Zabbix :
    ```bash
    systemctl restart zabbix-agent2
    ```
-3. **Testez une clé** pour vérifier :
+5. **Testez une clé** pour vérifier :
    ```bash
    zabbix_agent2 -t "galera.node.connected"
    ```
-4. **Assurez-vous que l'utilisateur a accès à MySQL** :
+6. **Assurez-vous que l'utilisateur a accès à MySQL** :
    ```bash
    mysql -u {USER} -p{PASS}
    ```
