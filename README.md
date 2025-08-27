@@ -14,7 +14,7 @@ Il s'appuie sur des **UserParameters** pour interroger les variables `wsrep`.
 
 ---
 
-## ✅ **Installation**
+## ✅ **Installation sur l'agent2**
    1a. **Telecharger le fichier galera.conf** dans le dossier `zabbix_agent2.d/plugins.d` :
    ```bash
    apt update -y && apt install -y wget
@@ -32,12 +32,18 @@ Il s'appuie sur des **UserParameters** pour interroger les variables `wsrep`.
    ```bash
    zabbix_agent2 -t "galera.node.connected"
    ```
-4. **Assurez-vous que l'utilisateur Zabbix a accès à MySQL** :
+4. **Assurez-vous que l'utilisateur a accès à MySQL** :
    ```bash
-   mysql -u zabbix -p
+   mysql -u {USER} -p{PASS}
    ```
 ---
+## ✅ **Installation du template**
+1. Telecharger le fichier "template_galera_zabbix.xml"
+2. L'importer dans zabbix
+> Collecte de donnée -> Modèle -> importer
 
+**Vous pouvez modifier les seuils des triggers via les macros (liste ci-dessous)**
+---
 ## ✅ **Clés Zabbix et Description (galera.conf)**
 
 |              Clé Zabbix             |       Variable Galera      |                                Description                                |
