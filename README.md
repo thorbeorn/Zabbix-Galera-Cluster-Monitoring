@@ -38,7 +38,7 @@ Il s'appuie sur des **UserParameters** pour interroger les variables `wsrep`.
    ```
 ---
 
-## ✅ **Clés Zabbix et Description**
+## ✅ **Clés Zabbix et Description (galera.conf)**
 
 |              Clé Zabbix             |       Variable Galera      |                                Description                                |
 |:-----------------------------------:|:--------------------------:|:-------------------------------------------------------------------------:|
@@ -111,6 +111,32 @@ Il s'appuie sur des **UserParameters** pour interroger les variables `wsrep`.
 | galera.misc.open_transactions      | wsrep_open_transactions      | Nombre de transactions locales en cours.                                            |
 | galera.misc.open_connections       | wsrep_open_connections       | Nombre de connexions ouvertes dans le provider wsrep.                               |
 
+## ✅ **Nom du Trigger, Macro(s), Gravité, Valeur par défaut (template_galera_zabbix.xml)**
+|                          Nom du Trigger                         |                   Macro(s)                   |    Gravité    |                Valeur par défaut               |
+|:---------------------------------------------------------------:|:--------------------------------------------:|:-------------:|:----------------------------------------------:|
+| Galera Cluster: Le cluster n'est plus primaire                  | (Aucune macro)                               | Désastre      | (n/a)                                          |
+| Galera Cluster: Quorum perdu                                    | {$CLUSTER.NBR_NODE}, {$CLUSTER.NBR_ARBITROR} | Désastre      | {$CLUSTER.NBR_NODE}=2, {$CLUSTER.NBR_ARBITROR}=1 |
+| Galera Cluster: Taille réduite                                  | {$CLUSTER.NBR_NODE}, {$CLUSTER.NBR_ARBITROR} | Moyen         | {$CLUSTER.NBR_NODE}=2, {$CLUSTER.NBR_ARBITROR}=1 |
+| Galera Cluster: UUID changé                                     | (Aucune macro)                               | Avertissement | (n/a)                                          |
+| Galera Misc: Application hors ordre fréquente                   | {$GALERA_APPLY_OOOE_WARN}                    | Information   | 10                                             |
+| Galera Misc: File locale d'envoi trop longue                    | {$GALERA_LOCAL_SEND_QUEUE_WARN}              | Avertissement | 100                                            |
+| Galera Misc: File locale de réception trop longue               | {$GALERA_LOCAL_RECV_QUEUE_WARN}              | Avertissement | 100                                            |
+| Galera Misc: Flow control actif"                                | (Pas de macro)                               | Information   | (n/a)                                          |
+| Galera Misc: Flow control demandé"                              | (Pas de macro)                               | Avertissement | (n/a)                                          |
+| Galera Misc: Trop d'événements Flow Control envoyés             | {$GALERA_FLOW_CTRL_SENT_WARN}                | Avertissement | 10                                             |
+| Galera Misc: Trop de connexions ouvertes                        | {$GALERA_OPEN_CONN_WARN}                     | Information   | 500                                            |
+| Galera Misc: Trop de transactions ouvertes                      | {$GALERA_OPEN_TX_WARN}                       | Moyen         | 100                                            |
+| Galera Network: Longueur moyenne de la file de réception élevée | {$GALERA_RECV_QUEUE_WARN}                    | Avertissement | 100                                            |
+| Galera Network: Temps de réplication trop élevé                 | {$GALERA_REPL_LATENCY_WARN}                  | Haut          | 0.1 (100 ms)                                   |
+| Galera Network: Variation importante dans la file de réception  | {$GALERA_QUEUE_DIFF_WARN}                    | Information   | 50                                             |
+| Galera Node: Bloqué en mode Donor                               | (Pas de macro)                               | Moyen         | (n/a)                                          |
+| Galera Node: Disconnected                                       | (Pas de macro)                               | Désastre      | (n/a)                                          |
+| Galera Node: Haut temps de pause pour le flow control           | {$GALERA_FC_PAUSED_WARN}                     | Moyen         | 0.2 (20%)                                      |
+| Galera Node: Le node n'est pas synchronisé                      | (Pas de macro)                               | Haut          | (n/a)                                          |
+| Galera Node: Node rejette les requêtes                          | (Pas de macro)                               | Haut          | (n/a)                                          |
+| Galera Node: Pas prêt                                           | (Pas de macro)                               | Haut          | (n/a)                                          |
+| Galera Replication: Flow control activé plus de 10% du temps    | {$GALERA_FLOW_CONTROL_WARN}                  | Moyen         | 0.1 (10%)                                      |
+| Galera Replication: Parallélisme faible                         | {$GALERA_CERT_DEPS_WARN}                     | Information   | 0.1                                            |
 ---
 
 ## 🔗 **Référence**
