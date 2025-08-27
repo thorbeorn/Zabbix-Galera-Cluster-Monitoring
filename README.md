@@ -122,7 +122,7 @@ sed -i "s/db_pass/{inscrire votre pass}/g" /etc/zabbix/zabbix_agent2.d/plugins.d
 | galera.misc.cert_interval          | wsrep_cert_interval          | Nombre moyen de transactions reçues pendant la réplication d’un write-set.          |
 | galera.misc.open_transactions      | wsrep_open_transactions      | Nombre de transactions locales en cours.                                            |
 | galera.misc.open_connections       | wsrep_open_connections       | Nombre de connexions ouvertes dans le provider wsrep.                               |
-
+---
 ## ✅ **Nom du Trigger, Macro(s), Gravité, Valeur par défaut (template_galera_zabbix.xml)**
 |                          Nom du Trigger                         |                   Macro(s)                   |    Gravité    |                Valeur par défaut               |
 |:---------------------------------------------------------------:|:--------------------------------------------:|:-------------:|:----------------------------------------------:|
@@ -155,3 +155,9 @@ sed -i "s/db_pass/{inscrire votre pass}/g" /etc/zabbix/zabbix_agent2.d/plugins.d
 - [Documentation officielle Galera wsrep status variables](https://galeracluster.com/library/documentation/galera-status-variables.html#wsrep-ist-receive-status)
 
 ---
+## 📸 **sceenshot du dashboard**
+<img width="1149" height="500" alt="image" src="https://github.com/user-attachments/assets/5a8cb3bf-85aa-4709-bc63-fbd707e2070b" />
+<img width="1150" height="630" alt="image" src="https://github.com/user-attachments/assets/8ba47e99-bf10-4304-b37c-94fbc1939798" />
+<img width="1151" height="314" alt="image" src="https://github.com/user-attachments/assets/7af2b901-915c-4322-82d3-ed39f1481360" />
+
+
