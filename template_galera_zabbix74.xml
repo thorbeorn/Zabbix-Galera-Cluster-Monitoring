@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>7.4</version>
+  <template_groups>
+      <template_group>
+        <uuid>c44342fc138f4a6db6904e004a28f57b</uuid>
+        <name>Templates/Databases</name>
+      </template_group>
+    </template_groups>
+  <templates>
+    <template>
+      <uuid>3713bdbe67884035a9580ad534672c89</uuid>
+      <template>Galera cluster by Zabbix agent 2</template>
+      <name>Galera cluster by Zabbix agent 2</name>
+      <vendor>
+        <name>Thorbeorn</name>
+        <version>1.1</version>
+      </vendor>
+      <groups>
+        <group>
+          <name>Templates/Databases</name>
+        </group>
+      </groups>
+      <items>
+        <item>
+          <uuid>9e7a6fe64dc64754a38ec1ea15b8c375</uuid>
+          <name>Galera Cluster UUID</name>
+          <key>galera.cluster.uuid</key>
+          <value_type>TEXT</value_type>
+          <description>UUID unique représentant l'état actuel du cluster.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>3a2aee7e9e8f4b3ebdad727bc823d972</uuid>
+          <name>Galera Cluster Conf ID</name>
+          <key>galera.cluster.conf_id</key>
+          <value_type>FLOAT</value_type>
+          <description>ID de configuration actuel du cluster (nombre de changements de membres).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>b690186a8ec3499287b0b3648a67db14</uuid>
+          <name>Galera Cluster Size</name>
+          <key>galera.cluster.size</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre total de nœuds dans le cluster.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>beda7732132641bda0e2eb2f3e4ee826</uuid>
+          <name>Galera Cluster Status</name>
+          <key>galera.cluster.status</key>
+          <value_type>TEXT</value_type>
+          <description>Statut global du cluster (Primary, Non-Primary, Disconnected).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>8c511c42cc624e7eb966149e19f532fd</uuid>
+          <name>Galera Cluster Last Committed</name>
+          <key>galera.cluster.last_committed</key>
+          <value_type>FLOAT</value_type>
+          <description>Dernier ID de transaction validée dans le cluster.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>25773774693a4f928f9c85c92047a281</uuid>
+          <name>Galera Cluster Weight</name>
+          <key>galera.cluster.cluster_weight</key>
+          <value_type>FLOAT</value_type>
+          <description>Poids total du cluster (somme des poids des nœuds).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>f2507e8339884cf1b205b6ba862e6b74</uuid>
+          <name>Galera Cluster EVS Delayed</name>
+          <key>galera.cluster.evs_delayed</key>
+          <value_type>TEXT</value_type>
+          <description>Liste des nœuds ayant des messages retardés.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>4fc47405ee7c417e88e4411bb4959812</uuid>
+          <name>Galera Cluster EVS Evict List</name>
+          <key>galera.cluster.evs_evict_list</key>
+          <value_type>TEXT</value_type>
+          <description>Liste des nœuds exclus du cluster.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>ce982d32164e438283001f377d1a3cd8</uuid>
+          <name>Galera Cluster EVS State</name>
+          <key>galera.cluster.evs_state</key>
+          <value_type>TEXT</value_type>
+          <description>État interne du protocole EVS.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>2c914bc3a8424ee484fc152d02025e20</uuid>
+          <name>Galera Cluster GComm UUID</name>
+          <key>galera.cluster.gcomm_uuid</key>
+          <value_type>TEXT</value_type>
+          <description>UUID interne du protocole GComm.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>f531ba3213b44bcdbe7319ee1a839b76</uuid>
+          <name>Galera Cluster Capabilities</name>
+          <key>galera.cluster.cluster_capabilities</key>
+          <value_type>TEXT</value_type>
+          <description>Capacités activées pour le cluster.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>e27588f2d8624129ae36df513c94b9b6</uuid>
+          <name>Galera Cluster Provider Name</name>
+          <key>galera.cluster.provider_name</key>
+          <value_type>TEXT</value_type>
+          <description>Nom du provider Galera (ex: Galera).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>c6bf3471039547b39a183c9a54c956a1</uuid>
+          <name>Galera Cluster Provider Vendor</name>
+          <key>galera.cluster.provider_vendor</key>
+          <value_type>TEXT</value_type>
+          <description>Fournisseur du provider (ex: Codership).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>9ffaa9b9e68e46ad9d1902e51366f1f0</uuid>
+          <name>Galera Cluster Provider Version</name>
+          <key>galera.cluster.provider_version</key>
+          <value_type>TEXT</value_type>
+          <description>Version du provider Galera.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>6991e02cd4f94a529eaf6c04d17ee19c</uuid>
+          <name>Galera Cluster Protocol Version</name>
+          <key>galera.cluster.protocol_version</key>
+          <value_type>FLOAT</value_type>
+          <description>Version du protocole Galera.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>     
+        <item>
+          <uuid>4a6ebcad48734ae9b0de4aae36ef860c</uuid>
+          <name>Galera Node Ready</name>
+          <key>galera.node.ready</key>
+          <value_type>TEXT</value_type>
+          <description>Indique si le nœud est prêt à accepter des transactions (ON/OFF).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>03ff7b1eb0d34781ab96c6e397339415</uuid>
+          <name>Galera Node Connected</name>
+          <key>galera.node.connected</key>
+          <value_type>TEXT</value_type>
+          <description>Indique si le nœud est connecté au cluster.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>c599466873fa4f0d9f8a576ea0230fa5</uuid>
+          <name>Galera Node Status</name>
+          <key>galera.node.status</key>
+          <value_type>TEXT</value_type>
+          <description>Statut local du nœud (Synced, Donor, Joiner).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>566556c70b7d4defb2297cebc628fe42</uuid>
+          <name>Galera Node Local Cert Failures</name>
+          <key>galera.node.local_cert_failures</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre d’échecs de certification des transactions locales.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>cc9f54281f874bd0bb8dac1427a9dc9b</uuid>
+          <name>Galera Node Local BF Aborts</name>
+          <key>galera.node.local_bf_aborts</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre d’abandons dus aux conflits de certification locale.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>d4424005534944a489b5b95eef22c754</uuid>
+          <name>Galera Node Flow Control Paused NS</name>
+          <key>galera.node.flow_control_paused_ns</key>
+          <value_type>FLOAT</value_type>
+          <description>Temps total en pause à cause du Flow Control (en ns).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>ed69e0e8d7f049c48680280e052c53fe</uuid>
+          <name>Galera Node Apply OOOL</name>
+          <key>galera.node.apply_oool</key>
+          <value_type>FLOAT</value_type>
+          <description>Transactions appliquées hors ordre.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>34af7b7e2e4d4718b09fc2e32e6882aa</uuid>
+          <name>Galera Node Apply Waits</name>
+          <key>galera.node.apply_waits</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre de fois que l’applier a attendu l’ordre des transactions.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>1857b7e51f8c43978d9b531af623c109</uuid>
+          <name>Galera Node Commit OOOL</name>
+          <key>galera.node.commit_oool</key>
+          <value_type>FLOAT</value_type>
+          <description>Transactions validées hors ordre.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>ea92aa5fab6c4167a1f6c1dce4e8066c</uuid>
+          <name>Galera Node Desync Count</name>
+          <key>galera.node.desync_count</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre de fois que le nœud est passé en mode désynchronisé.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>2d3e290f2f33426ca048642193267220</uuid>
+          <name>Galera Node GMCAST Segment</name>
+          <key>galera.node.gmcast_segment</key>
+          <value_type>FLOAT</value_type>
+          <description>Segment du cluster auquel appartient le nœud.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>ba75939ef29c4fd3b125ef16d3ff4f5a</uuid>
+          <name>Galera Node Applier Thread Count</name>
+          <key>galera.node.applier_thread_count</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre de threads appliquant les transactions.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>5d1e5a182fee450f81534922a9602698</uuid>
+          <name>Galera Node Provider Capabilities</name>
+          <key>galera.node.provider_capabilities</key>
+          <value_type>TEXT</value_type>
+          <description>Capacités activées pour le provider sur ce nœud.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>c88f3fb277994bd7a9ea6a434b0ff5b6</uuid>
+          <name>Galera Node Rollbacker Thread Count</name>
+          <key>galera.node.rollbacker_thread_count</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre de threads rollbacker sur le nœud.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>010cc39402a44425b1d2b50e952d5990</uuid>
+          <name>Galera Node Thread Count</name>
+          <key>galera.node.thread_count</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre total de threads wsrep (applier/rollbacker).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>9cce8f1fe73b47b1a58539e4926c8f49</uuid>
+          <name>Galera Node IST Receive Status</name>
+          <key>galera.node.ist_receive_status</key>
+          <value_type>TEXT</value_type>
+          <description>État actuel de la synchronisation IST (Incremental State Transfer).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item> 
+        <item>
+          <uuid>201b0aae450b46dc98a357079caa49cc</uuid>
+          <name>Galera Replication Flow Control Paused</name>
+          <key>galera.replication.flow_control_paused</key>
+          <value_type>FLOAT</value_type>
+          <description>Fraction du temps depuis le dernier FLUSH STATUS où le flow control a suspendu la réplication.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>3b5d77cc8d9a4a0f863928accea18282</uuid>
+          <name>Galera Replication Cert Deps Distance</name>
+          <key>galera.replication.cert_deps_distance</key>
+          <value_type>FLOAT</value_type>
+          <description>Distance moyenne entre le plus haut et le plus bas seqno pouvant être appliqué en parallèle (potentiel de parallélisme).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>6da38539da064238902be468cc10353a</uuid>
+          <name>Galera Network Recv Queue Avg</name>
+          <key>galera.network.recv_queue_avg</key>
+          <value_type>FLOAT</value_type>
+          <description>Longueur moyenne de la file d’attente de réception depuis le dernier FLUSH STATUS.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>202905358206492483d267567ea3e0fa</uuid>
+          <name>Galera Network Recv Queue Max</name>
+          <key>galera.network.recv_queue_max</key>
+          <value_type>FLOAT</value_type>
+          <description>Longueur maximale de la file d’attente de réception depuis le dernier FLUSH STATUS.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>63be13c1d90341d4880d3690a6292a51</uuid>
+          <name>Galera Network Recv Queue Min</name>
+          <key>galera.network.recv_queue_min</key>
+          <value_type>FLOAT</value_type>
+          <description>Longueur minimale de la file d’attente de réception depuis le dernier FLUSH STATUS.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>eb0d100cc6624662a62e6e07727a46f9</uuid>
+          <name>Galera Network Send Queue Avg</name>
+          <key>galera.network.send_queue_avg</key>
+          <value_type>FLOAT</value_type>
+          <description>Longueur moyenne de la file d’attente d’envoi depuis le dernier FLUSH STATUS.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>981b6e3df3434efb8305ae42605e89b8</uuid>
+          <name>Galera Network Send Queue Max</name>
+          <key>galera.network.send_queue_max</key>
+          <value_type>FLOAT</value_type>
+          <description>Longueur maximale de la file d’attente d’envoi depuis le dernier FLUSH STATUS.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>61308d56b44f4883bf10b1feb5e63521</uuid>
+          <name>Galera Network Send Queue Min</name>
+          <key>galera.network.send_queue_min</key>
+          <value_type>FLOAT</value_type>
+          <description>Longueur minimale de la file d’attente d’envoi depuis le dernier FLUSH STATUS.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>727b71badabd4945a9a1b9098e98174f</uuid>
+          <name>Galera Network Incoming Addresses</name>
+          <key>galera.network.incoming_addresses</key>
+          <value_type>TEXT</value_type>
+          <description>Liste des adresses entrantes du cluster.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>6adf2bf2a2444001baf5611740902852</uuid>
+          <name>Galera Network EVS Repl Latency</name>
+          <key>galera.network.evs_repl_latency</key>
+          <value_type>TEXT</value_type>
+          <description>Latence de réplication EVS (min/avg/max/stddev/sample size).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>0166453ee7b743659e0a38ed9111307a</uuid>
+          <name>Galera Misc Replicated</name>
+          <key>galera.misc.replicated</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre total de write-sets répliqués vers les autres nœuds.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>dd0970ef7bed47b685c508372345e1ad</uuid>
+          <name>Galera Misc Replicated Bytes</name>
+          <key>galera.misc.replicated_bytes</key>
+          <value_type>FLOAT</value_type>
+          <description>Taille totale en octets des write-sets répliqués.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>72f43348958e4cd09f01686c3014c6e8</uuid>
+          <name>Galera Misc Repl Keys</name>
+          <key>galera.misc.repl_keys</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre total de clés répliquées.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>280d7aafba6d4246b959b375952d025e</uuid>
+          <name>Galera Misc Repl Keys Bytes</name>
+          <key>galera.misc.repl_keys_bytes</key>
+          <value_type>FLOAT</value_type>
+          <description>Taille totale en octets des clés répliquées.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>adfdd0e21da24b468a373a5bd39e5b83</uuid>
+          <name>Galera Misc Repl Data Bytes</name>
+          <key>galera.misc.repl_data_bytes</key>
+          <value_type>FLOAT</value_type>
+          <description>Taille totale des données répliquées.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>938a05b6e046454db840da3b9fa76b48</uuid>
+          <name>Galera Misc Repl Other Bytes</name>
+          <key>galera.misc.repl_other_bytes</key>
+          <value_type>FLOAT</value_type>
+          <description>Taille totale des autres données répliquées.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>824adbe9021a433c9fcec14557e12e6c</uuid>
+          <name>Galera Misc Received</name>
+          <key>galera.misc.received</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre total de write-sets reçus depuis d’autres nœuds.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>cb520f817e114b5b8341e87a1981e902</uuid>
+          <name>Galera Misc Received Bytes</name>
+          <key>galera.misc.received_bytes</key>
+          <value_type>FLOAT</value_type>
+          <description>Taille totale en octets des write-sets reçus.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>f8ab5ae43be14c37a577fb142cd1ad1d</uuid>
+          <name>Galera Misc Local Commits</name>
+          <key>galera.misc.local_commits</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre total de transactions locales validées.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>3be8c1f62f9e48338e78080e294a14a9</uuid>
+          <name>Galera Misc Local Replays</name>
+          <key>galera.misc.local_replays</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre total de replays de transactions locales à cause de verrous asymétriques.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>a402269c144b4e11a65f233cd605c4b9</uuid>
+          <name>Galera Misc Local Send Queue</name>
+          <key>galera.misc.local_send_queue</key>
+          <value_type>FLOAT</value_type>
+          <description>Longueur instantanée de la file d’envoi locale.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>ae4b2098507a477e8e700d57cf2cf602</uuid>
+          <name>Galera Misc Local Recv Queue</name>
+          <key>galera.misc.local_recv_queue</key>
+          <value_type>FLOAT</value_type>
+          <description>Longueur instantanée de la file de réception locale.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>3cf8c04ba5134618b2fe75ee81878b98</uuid>
+          <name>Galera Misc Local Cached Downto</name>
+          <key>galera.misc.local_cached_downto</key>
+          <value_type>FLOAT</value_type>
+          <description>Plus petit seqno dans le cache de write-set (GCache).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>bb37dcce4dd744ba96373bda9453f19e</uuid>
+          <name>Galera Misc Local State</name>
+          <key>galera.misc.local_state</key>
+          <value_type>TEXT</value_type>
+          <description>État FSM interne du nœud Galera.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>ece979d8b8d648dcad933419a4504884</uuid>
+          <name>Galera Misc Local Index</name>
+          <key>galera.misc.local_index</key>
+          <value_type>FLOAT</value_type>
+          <description>Index du nœud dans le cluster (base 0).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>e3ede67311514c21b5e0f77dbcb4d5d8</uuid>
+          <name>Galera Misc Flow Control Sent</name>
+          <key>galera.misc.flow_control_sent</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre d’événements FC_PAUSE envoyés par le nœud.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>3f71294a45df49609b22a8976daabce2</uuid>
+          <name>Galera Misc Flow Control Recv</name>
+          <key>galera.misc.flow_control_recv</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre d’événements FC_PAUSE reçus par le nœud.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>6e1c3f4569de48508c2ef940f5954a45</uuid>
+          <name>Galera Misc Flow Control Active</name>
+          <key>galera.misc.flow_control_active</key>
+          <value_type>TEXT</value_type>
+          <description>Indique si le flow control est actif (réplication suspendue).</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>7c36db8f356246efa909c8e24afad853</uuid>
+          <name>Galera Misc Flow Control Requested</name>
+          <key>galera.misc.flow_control_requested</key>
+          <value_type>TEXT</value_type>
+          <description>Indique si le nœud a demandé la suspension de la réplication.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>4fd1630a874247d8a1f58bfbafb098c5</uuid>
+          <name>Galera Misc Apply OOOE</name>
+          <key>galera.misc.apply_oooe</key>
+          <value_type>FLOAT</value_type>
+          <description>Fréquence à laquelle les write-sets ont été appliqués hors ordre.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>327e84d059804736b5264a9c7a43b6aa</uuid>
+          <name>Galera Misc Apply Window</name>
+          <key>galera.misc.apply_window</key>
+          <value_type>FLOAT</value_type>
+          <description>Distance moyenne entre le seqno le plus haut et le plus bas appliqué simultanément.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>53949349be144c939834e99fa8f5e373</uuid>
+          <name>Galera Misc Commit OOOE</name>
+          <key>galera.misc.commit_oooe</key>
+          <value_type>FLOAT</value_type>
+          <description>Fréquence à laquelle les transactions ont été validées hors ordre.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>828dad8dfa4a474c8d73339dfa9a5561</uuid>
+          <name>Galera Misc Commit Window</name>
+          <key>galera.misc.commit_window</key>
+          <value_type>FLOAT</value_type>
+          <description>Distance moyenne entre le seqno le plus haut et le plus bas validé simultanément.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>91019a2cf66d4483b7f552ab63b95e1d</uuid>
+          <name>Galera Misc Cert Index Size</name>
+          <key>galera.misc.cert_index_size</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre d’entrées dans l’index de certification.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>889f17c7c9804a56b4e84d89faa912de</uuid>
+          <name>Galera Misc Cert Interval</name>
+          <key>galera.misc.cert_interval</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre moyen de transactions reçues pendant la réplication d’un write-set.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>fe9b83f0b81b4717921a25cad07dcc07</uuid>
+          <name>Galera Misc Open Transactions</name>
+          <key>galera.misc.open_transactions</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre de transactions locales en cours.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+        <item>
+          <uuid>f40f6c29dc9645dbab223bc54c0671a4</uuid>
+          <name>Galera Misc Open Connections</name>
+          <key>galera.misc.open_connections</key>
+          <value_type>FLOAT</value_type>
+          <description>Nombre de connexions ouvertes dans le provider wsrep.</description>
+          <tags>
+            <tag>
+                <tag>component</tag>
+                <value>galera</value>
+            </tag>
+          </tags>
+        </item>
+      </items>
+      <tags>
+        <tag>
+          <tag>class</tag>
+          <value>database</value>
+        </tag>
+        <tag>
+          <tag>subclass</tag>
+          <value>sql</value>
+        </tag>
+        <tag>
+          <tag>target</tag>
+          <value>galera</value>
+        </tag>
+      </tags>
+    </template>
+  </templates>
+</zabbix_export>
