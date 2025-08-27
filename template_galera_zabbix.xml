@@ -295,7 +295,7 @@
                     <triggers>
                         <trigger>
                             <uuid>fd5dd9f5f7bd45738b42f613638d925c</uuid>
-                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.apply_oooe)=10</expression>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.apply_oooe)={$GALERA_APPLY_OOOE_WARN}</expression>
                             <name>Galera Misc: Application hors ordre fréquente</name>
                             <priority>INFO</priority>
                             <description>Une application hors ordre fréquente peut indiquer un manque de parallélisme ou un retard dans la réplication.</description>
@@ -457,7 +457,7 @@
                     <triggers>
                         <trigger>
                             <uuid>b2a4d3e1c752406e9d99b5ddf2a05873</uuid>
-                            <expression>change(/Galera cluster by Zabbix agent 2/galera.misc.flow_control_sent)=10</expression>
+                            <expression>change(/Galera cluster by Zabbix agent 2/galera.misc.flow_control_sent)={$GALERA_FLOW_CTRL_SENT_WARN}</expression>
                             <name>Galera Misc: Trop d'événements Flow Control envoyés</name>
                             <event_name>Galera Misc: Trop d'événements Flow Control envoyés (valeur = {ITEM.VALUE})</event_name>
                             <priority>WARNING</priority>
@@ -525,7 +525,7 @@
                     <triggers>
                         <trigger>
                             <uuid>27d9a4041cd34b89aab02a43596761ce</uuid>
-                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.local_recv_queue)&gt;=100</expression>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.local_recv_queue)&gt;={$GALERA_LOCAL_RECV_QUEUE_WARN}</expression>
                             <name>Galera Misc: File locale de réception trop longue</name>
                             <event_name>Galera Misc: File locale de réception trop longue (valeur = {ITEM.VALUE})</event_name>
                             <priority>WARNING</priority>
@@ -567,7 +567,7 @@
                     <triggers>
                         <trigger>
                             <uuid>69b596dfce0a4e4f8d169d6e3190a88a</uuid>
-                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.local_send_queue)&gt;=100</expression>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.local_send_queue)&gt;={$GALERA_LOCAL_SEND_QUEUE_WARN}</expression>
                             <name>Galera Misc: File locale d'envoi trop longue</name>
                             <event_name>Galera Misc: File locale d'envoi trop longue (valeur = {ITEM.VALUE})</event_name>
                             <priority>WARNING</priority>
@@ -609,7 +609,7 @@
                     <triggers>
                         <trigger>
                             <uuid>845ecdfc8b8c4b5eae173aa4bab30579</uuid>
-                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.open_connections)&gt;=500</expression>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.open_connections)&gt;={$GALERA_OPEN_CONN_WARN}</expression>
                             <name>Galera Misc: Trop de connexions ouvertes</name>
                             <event_name>Galera Misc: Trop de connexions ouvertes (valeur = {ITEM.VALUE})</event_name>
                             <priority>INFO</priority>
@@ -638,7 +638,7 @@
                     <triggers>
                         <trigger>
                             <uuid>e28c4a135fc942f8a313ed1bb072894c</uuid>
-                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.open_transactions)&gt;=100</expression>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.open_transactions)&gt;={$GALERA_OPEN_TX_WARN}</expression>
                             <name>Galera Misc: Trop de transactions ouvertes</name>
                             <event_name>Galera Misc: Trop de transactions ouvertes (valeur = {ITEM.VALUE})</event_name>
                             <priority>AVERAGE</priority>
@@ -796,7 +796,7 @@
                     <triggers>
                         <trigger>
                             <uuid>5c0680fa8b20456cb93090b144c91c38</uuid>
-                            <expression>min(/Galera cluster by Zabbix agent 2/galera.network.evs_repl_latency_avg,5m)&gt;0.1</expression>
+                            <expression>min(/Galera cluster by Zabbix agent 2/galera.network.evs_repl_latency_avg,5m)&gt;{$GALERA_REPL_LATENCY_WARN}</expression>
                             <name>Galera Network : Temps de replication trop élevé</name>
                             <event_name>Galera Network : Temps de replication trop élevé (valeur = {ITEM.VALUE})</event_name>
                             <priority>HIGH</priority>
@@ -938,7 +938,7 @@
                     <triggers>
                         <trigger>
                             <uuid>9c4bbdfe49f1429ab74cca4c16c2d95d</uuid>
-                            <expression>last(/Galera cluster by Zabbix agent 2/galera.network.recv_queue_avg)&gt;100</expression>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.network.recv_queue_avg)&gt;{$GALERA_REPL_LATENCY_WARN}</expression>
                             <name>Galera Network: Longueur moyenne de la file de réception élevée</name>
                             <event_name>Galera Network: Longueur moyenne de la file de réception élevée (valeur = {ITEM.VALUE})</event_name>
                             <priority>WARNING</priority>
@@ -993,7 +993,7 @@
                     <triggers>
                         <trigger>
                             <uuid>aee083f3352647e3bea9f4015b9d442e</uuid>
-                            <expression>last(/Galera cluster by Zabbix agent 2/galera.network.send_queue_avg)&gt;100</expression>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.network.send_queue_avg)&gt;{$GALERA_RECV_QUEUE_WARN}</expression>
                             <name>Galera Network: Longueur moyenne de la file d'envoi élevée</name>
                             <event_name>Galera Network: Longueur moyenne de la file d'envoi élevée (valeur = {ITEM.VALUE})</event_name>
                             <priority>WARNING</priority>
@@ -1142,7 +1142,7 @@
                     <triggers>
                         <trigger>
                             <uuid>b06696e7b3504eb2bbb7f80bf930c93c</uuid>
-                            <expression>last(/Galera cluster by Zabbix agent 2/galera.node.flow_control_paused_ns)&gt;0.2</expression>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.node.flow_control_paused_ns)&gt;{$GALERA_FC_PAUSED_WARN}</expression>
                             <name>Galera Node: Haut temps de pause pour le flow control</name>
                             <event_name>Galera Node: Haut temps de pause pour le flow control (avg = {ITEM.VALUE})</event_name>
                             <priority>AVERAGE</priority>
@@ -1348,7 +1348,7 @@
                     <triggers>
                         <trigger>
                             <uuid>28b8ee216eb44be19089de0d3b4f6bd7</uuid>
-                            <expression>last(/Galera cluster by Zabbix agent 2/galera.replication.cert_deps_distance)&gt;=0.1</expression>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.replication.cert_deps_distance)&gt;={$GALERA_CERT_DEPS_WARN}</expression>
                             <name>Galera Replication: Parallélisme faible</name>
                             <priority>INFO</priority>
                             <description>Un faible parallélisme des transactions peut indiquer des goulots d'étranglement dans la réplication.</description>
@@ -1376,7 +1376,7 @@
                     <triggers>
                         <trigger>
                             <uuid>0acff787cdca44efa2a32a215bcbc45f</uuid>
-                            <expression>last(/Galera cluster by Zabbix agent 2/galera.replication.flow_control_paused)&gt;=0.1</expression>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.replication.flow_control_paused)&gt;={$GALERA_FLOW_CONTROL_WARN}</expression>
                             <name>Galera Replication: Flow control activé plus de 10% du temps</name>
                             <priority>AVERAGE</priority>
                             <description>Le flow control est activé trop souvent, ce qui signifie que la réplication est régulièrement bloquée.</description>
@@ -1413,13 +1413,61 @@
                     <macro>{$CLUSTER.NBR_NODE}</macro>
                     <value>2</value>
                 </macro>
+                <macro>
+                    <macro>{$GALERA_APPLY_OOOE_WARN}</macro>
+                    <value>10</value>
+                </macro>
+                <macro>
+                    <macro>{$GALERA_CERT_DEPS_WARN}</macro>
+                    <value>0.1</value>
+                </macro>
+                <macro>
+                    <macro>{$GALERA_FC_PAUSED_WARN}</macro>
+                    <value>0.2</value>
+                </macro>
+                <macro>
+                    <macro>{$GALERA_FLOW_CONTROL_WARN}</macro>
+                    <value>0.1</value>
+                </macro>
+                <macro>
+                    <macro>{$GALERA_FLOW_CTRL_SENT_WARN}</macro>
+                    <value>10</value>
+                </macro>
+                <macro>
+                    <macro>{$GALERA_LOCAL_RECV_QUEUE_WARN}</macro>
+                    <value>100</value>
+                </macro>
+                <macro>
+                    <macro>{$GALERA_LOCAL_SEND_QUEUE_WARN}</macro>
+                    <value>100</value>
+                </macro>
+                <macro>
+                    <macro>{$GALERA_OPEN_CONN_WARN}</macro>
+                    <value>500</value>
+                </macro>
+                <macro>
+                    <macro>{$GALERA_OPEN_TX_WARN}</macro>
+                    <value>100</value>
+                </macro>
+                <macro>
+                    <macro>{$GALERA_QUEUE_DIFF_WARN}</macro>
+                    <value>50</value>
+                </macro>
+                <macro>
+                    <macro>{$GALERA_RECV_QUEUE_WARN}</macro>
+                    <value>100</value>
+                </macro>
+                <macro>
+                    <macro>{$GALERA_REPL_LATENCY_WARN}</macro>
+                    <value>0.1</value>
+                </macro>
             </macros>
         </template>
     </templates>
     <triggers>
         <trigger>
             <uuid>007a91723818421f8ba34b9d3c0b90e9</uuid>
-            <expression>(last(/Galera cluster by Zabbix agent 2/galera.network.recv_queue_max)-last(/Galera cluster by Zabbix agent 2/galera.network.recv_queue_min))&gt;50</expression>
+            <expression>(last(/Galera cluster by Zabbix agent 2/galera.network.recv_queue_max)-last(/Galera cluster by Zabbix agent 2/galera.network.recv_queue_min))&gt;{$GALERA_QUEUE_DIFF_WARN}</expression>
             <name>Galera Network: Variation importante dans la file de réception</name>
             <priority>INFO</priority>
             <description>Indique une variation importante dans les files de réception, ce qui peut refléter une latence réseau fluctuante.</description>
