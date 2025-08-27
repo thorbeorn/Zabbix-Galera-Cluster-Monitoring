@@ -292,6 +292,21 @@
                             <value>galera</value>
                         </tag>
                     </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>fd5dd9f5f7bd45738b42f613638d925c</uuid>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.apply_oooe)=10</expression>
+                            <name>Galera Misc: Application hors ordre fréquente</name>
+                            <priority>INFO</priority>
+                            <description>Une application hors ordre fréquente peut indiquer un manque de parallélisme ou un retard dans la réplication.</description>
+                            <tags>
+                                <tag>
+                                    <tag>scope</tag>
+                                    <value>galera misc</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
                 </item>
                 <item>
                     <uuid>327e84d059804736b5264a9c7a43b6aa</uuid>
@@ -370,6 +385,21 @@
                             <value>galera</value>
                         </tag>
                     </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>4423c14e9d554f508be3fb2b74423c25</uuid>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.flow_control_active)=&quot;ON&quot;</expression>
+                            <name>Galera Misc: Flow control actif</name>
+                            <priority>INFO</priority>
+                            <description>Le Flow Control est actuellement actif sur ce nœud, ce qui bloque la réplication entrante.</description>
+                            <tags>
+                                <tag>
+                                    <tag>scope</tag>
+                                    <value>galera misc</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
                 </item>
                 <item>
                     <uuid>3f71294a45df49609b22a8976daabce2</uuid>
@@ -396,6 +426,21 @@
                             <value>galera</value>
                         </tag>
                     </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>39fdf43b0fb84643ab6be59abbcc7008</uuid>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.flow_control_requested)=&quot;ON&quot;</expression>
+                            <name>Galera Misc: Flow control demandé</name>
+                            <priority>WARNING</priority>
+                            <description>Ce nœud demande un arrêt temporaire de la réplication en raison d'une surcharge.</description>
+                            <tags>
+                                <tag>
+                                    <tag>scope</tag>
+                                    <value>galera misc</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
                 </item>
                 <item>
                     <uuid>e3ede67311514c21b5e0f77dbcb4d5d8</uuid>
@@ -409,6 +454,22 @@
                             <value>galera</value>
                         </tag>
                     </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>b2a4d3e1c752406e9d99b5ddf2a05873</uuid>
+                            <expression>change(/Galera cluster by Zabbix agent 2/galera.misc.flow_control_sent)=10</expression>
+                            <name>Galera Misc: Trop d'événements Flow Control envoyés</name>
+                            <event_name>Galera Misc: Trop d'événements Flow Control envoyés (valeur = {ITEM.VALUE})</event_name>
+                            <priority>WARNING</priority>
+                            <description>Un nombre élevé d'événements Flow Control envoyés indique que ce nœud ralentit régulièrement la réplication.</description>
+                            <tags>
+                                <tag>
+                                    <tag>scope</tag>
+                                    <value>galera misc</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
                 </item>
                 <item>
                     <uuid>3cf8c04ba5134618b2fe75ee81878b98</uuid>
@@ -461,6 +522,22 @@
                             <value>galera</value>
                         </tag>
                     </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>27d9a4041cd34b89aab02a43596761ce</uuid>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.local_recv_queue)&gt;=100</expression>
+                            <name>Galera Misc: File locale de réception trop longue</name>
+                            <event_name>Galera Misc: File locale de réception trop longue (valeur = {ITEM.VALUE})</event_name>
+                            <priority>WARNING</priority>
+                            <description>Une file de réception locale importante indique que le nœud est lent à appliquer les transactions.</description>
+                            <tags>
+                                <tag>
+                                    <tag>scope</tag>
+                                    <value>galera misc</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
                 </item>
                 <item>
                     <uuid>3be8c1f62f9e48338e78080e294a14a9</uuid>
@@ -487,6 +564,22 @@
                             <value>galera</value>
                         </tag>
                     </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>69b596dfce0a4e4f8d169d6e3190a88a</uuid>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.local_send_queue)&gt;=100</expression>
+                            <name>Galera Misc: File locale d'envoi trop longue</name>
+                            <event_name>Galera Misc: File locale d'envoi trop longue (valeur = {ITEM.VALUE})</event_name>
+                            <priority>WARNING</priority>
+                            <description>Une file d'envoi trop longue peut indiquer des problèmes de réseau ou un nœud lent à envoyer les transactions.</description>
+                            <tags>
+                                <tag>
+                                    <tag>scope</tag>
+                                    <value>galera misc</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
                 </item>
                 <item>
                     <uuid>bb37dcce4dd744ba96373bda9453f19e</uuid>
@@ -513,6 +606,22 @@
                             <value>galera</value>
                         </tag>
                     </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>845ecdfc8b8c4b5eae173aa4bab30579</uuid>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.open_connections)&gt;=500</expression>
+                            <name>Galera Misc: Trop de connexions ouvertes</name>
+                            <event_name>Galera Misc: Trop de connexions ouvertes (valeur = {ITEM.VALUE})</event_name>
+                            <priority>INFO</priority>
+                            <description>Un nombre excessif de connexions ouvertes dans le provider peut indiquer un problème de charge ou une fuite de connexions.</description>
+                            <tags>
+                                <tag>
+                                    <tag>scope</tag>
+                                    <value>galera misc</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
                 </item>
                 <item>
                     <uuid>fe9b83f0b81b4717921a25cad07dcc07</uuid>
@@ -526,6 +635,22 @@
                             <value>galera</value>
                         </tag>
                     </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>e28c4a135fc942f8a313ed1bb072894c</uuid>
+                            <expression>last(/Galera cluster by Zabbix agent 2/galera.misc.open_transactions)&gt;=100</expression>
+                            <name>Galera Misc: Trop de transactions ouvertes</name>
+                            <event_name>Galera Misc: Trop de transactions ouvertes (valeur = {ITEM.VALUE})</event_name>
+                            <priority>AVERAGE</priority>
+                            <description>Un nombre élevé de transactions ouvertes peut indiquer une saturation des ressources ou un problème applicatif.</description>
+                            <tags>
+                                <tag>
+                                    <tag>scope</tag>
+                                    <value>galera misc</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
                 </item>
                 <item>
                     <uuid>824adbe9021a433c9fcec14557e12e6c</uuid>
